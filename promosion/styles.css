@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    font-size: 14px; /* Tamaño de fuente global */
+}
+
+header {
+    background: #ff0000;
+    padding: 50px 0;
+    text-align: center;
+    width: 100%; /* Ocupa el 100% del ancho de la pantalla */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px; /* Limita el ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido en la pantalla */
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+}
+
+.content-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    position: relative; /* Permite posicionar la imagen de manera relativa */
+    margin-top: 50px; /* Espacio para que la imagen sobresalga */
+}
+
+.content-box img {
+    width: 80px; /* Tamaño más pequeño de la imagen */
+    height: 80px; /* Tamaño más pequeño de la imagen */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    position: absolute; /* Posiciona la imagen de manera absoluta */
+    top: -40px; /* Mueve la imagen hacia arriba para que sobresalga */
+    left: 50%; /* Centra la imagen horizontalmente */
+    transform: translateX(-50%); /* Ajusta el centrado horizontal */
+    border: 3px solid #fff; /* Borde blanco para que se vea mejor */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en vista de PC */
+    gap: 20px; /* Espacio entre tarjetas */
+    margin-top: 20px;
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    padding: 0 20px; /* Agrega margen a los lados */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #000;
+    font-size: 12px; /* Tamaño de fuente en las tarjetas */
+}
+
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.icon img {
+    width: 60px; /* Ajusta el tamaño de la imagen del icono */
+    height: 60px; /* Ajusta el tamaño de la imagen del icono */
+    border-radius: 10px;
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
+}
+
+.info {
+    flex-grow: 1;
+}
+
+.arrow {
+    font-size: 16px; /* Tamaño de la flecha */
+}
+
+h1 {
+    font-size: 24px; /* Tamaño del título principal */
+}
+
+h2 {
+    font-size: 16px; /* Tamaño de los títulos de las tarjetas */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .content-box {
+        margin-top: 30px;
+    }
+
+    .content-box img {
+        width: 60px;
+        height: 60px;
+        top: -30px;
+    }
+
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icon img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-box {
+        padding: 15px;
+    }
+
+    .content-box img {
+        width: 50px;
+        height: 50px;
+        top: -25px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .icon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 12px;
+    }
+}
